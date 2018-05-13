@@ -11,7 +11,9 @@ var app = angular.module("angModule", []).controller("imgController", function (
             url: "https://5ad8d1c9dc1baa0014c60c51.mockapi.io/api/br/v1/magic/" + imageID, method: 'GET', async: false, catch: false
         }).then(function successCallback(response) {
             getResponse = response.data;
-            $log.info(getResponse);
+            //$log.info(getResponse);
+            //Inserting Url to js array
+            imageObj.push(getResponse.imageUrl);
             //Checking the response data
             if (getResponse !== null) {
                 id = id + 1;

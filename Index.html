@@ -3,13 +3,21 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="Scripts/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" rel="stylesheet" />
     <script src="Scripts/angular.js"></script>
     <script src="AngExternalt.js"></script>
 </head>
-<body ng-app="angModule">
-    <div ng-controller="imgController">
-        <img ng-src="{{image}}" />
+<body class="container-fluid" ng-app="angModule">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#top">Album</a>
+    </nav>
+    <div class="row" ng-app="myModule" ng-controller="imgController">
+        <div class="col-md-3" ng-repeat="img in image">
+            <img class="img-thumbnail" ng-src="{{ img }}">
+        </div>
     </div>
+
+
 
 </body>
 </html>
